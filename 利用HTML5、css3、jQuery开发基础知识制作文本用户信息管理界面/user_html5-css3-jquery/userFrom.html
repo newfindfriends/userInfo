@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        
+</head>
+<body>
+    <div id="container">
+
+
+        <div id="head">
+
+            <div id="head-left">
+                <div><img id="images-logo"  src="images/logo.png"></div>
+                <div id="title1"> <span>用户管理系统</span></div>
+            </div>
+            <div id="title2">帮助&nbsp;&nbsp;退出</div>
+        </div>
+
+
+
+
+
+        <div id="left">
+            <div>
+                
+                <div class="user_menu">用户查询</div>
+                  <div class="user_menu">用户新增</div>
+            </div>
+
+            <div id="user-info">
+                <div style="text-align: center;"> <img id="images-head" src="images/minions.jpg"></div>
+                <div id="info">当前登录用户</div>
+            </div>
+
+        </div>
+
+
+        <div id="context">
+
+            <header id="trademark" >
+        新增&编辑用户信息
+        </header>
+                <form method="post"  onsubmit=" return submitTime()">
+        <div class="multiple">
+            
+            用户名称：
+            <input onblur="noNullOne()" id="userName" class="user" type="text" name="userName" placeholder="请输入您的用户名!">
+            <span id="warning1" class="warning"></span>
+        </div>
+        <div class="multiple">
+            登录密码：
+            <input onblur="noNullTwo()" id="pass" class="user" type="password" name="password" placeholder="请输入您的密码!">
+            <span id="warning2"  class="warning"></span>
+        </div>
+        <div class="multiple">
+            重复密码：
+            <input onblur="noNullThree()" id="passAgain" class="user" type="password" name="passwordAgain" placeholder="请输入您的确认密码！" >
+            <span id="warning3"  class="warning"></span>
+        </div>
+        <div class="multiple">
+            电子邮箱：
+            <input onblur="noNullFour()" id="postbox" class="user" type="email" name="" placeholder="请输入您的邮箱！" >
+            <span id="warning4"  class="warning"></span>
+        </div>
+        <div class="multiple">
+            性　　别：
+            <input id="result" type="radio" name="gender" value="男"  checked >男　　
+            <input id="result" type="radio" name="gender" value="女" >女
+        </div>
+        <div class="multiple">
+            职　　业：
+            <select style="height: 30px; border-radius :5px; ">
+                <option>
+                学生  
+                </option>
+                <option>
+                教师  
+                </option>
+                <option>
+                教授  
+                </option>
+            </select>
+        </div>
+        <div class="multiple">
+            爱　　好：
+            <select name="hobby" id="multiple-select"  multiple="multiple" size="4" >
+                <option value="书法">
+                书法  
+                </option >
+                <option value="乐器">
+                乐器  
+                </option>
+                <option value="运动">
+                运动  
+                </option>
+                <option value="编程">
+                编程  
+                </option>
+            </select>
+        </div>
+        <br>
+        <hr>
+
+        <div id="uploading">
+            <div id="localImag" style="width:130px;text-align:center; margin-left:auto; margin-right:auto;"><img id="preview" style="width:100px; height:130px;" runat="server" /></div>  
+              <p><input type=file name="doc" id="doc" onchange="javascript:setImagePreview();" value="上传头像"></p>  
+            
+
+        </div>
+
+        <div id="trademark">
+            
+                   
+
+                    <input style="background-color: rgb(86,184,90);" class="button" type="reset" name="" value="保存">
+                    <input style="background-color: rgb(2,151,194);"  class="button"  type="submit" name="" value="重置">
+                     <input style="background-color: rgb(199,199,199);" class="button" type="reset" name="" value="返回">
+        </div>
+       
+        <footer id="trademark">
+            
+                    OnMyOwn&copy;2018年遵义
+
+        </footer>
+
+
+
+        </form>
+
+                     
+        </div>
+
+
+    </div>
+
+
+        <script src="js/register.js"></script> 
+      
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+      
+
+
+</body>
+</html>
